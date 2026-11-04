@@ -1,0 +1,26 @@
+#!/bin/bash
+
+
+#To update and upgrate the Server
+sudo apt update
+sudo apt upgrade -y
+
+#To install the Git
+sudo apt install -y curl wget git nano unzip build-essential
+
+lsb_release -a
+
+git --version
+
+#To install the Node.js 
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+
+sudo apt install -y nodejs
+
+node -v
+npm -v
+
+#To install the pm2
+sudo npm install -g pm2
+
+pm2 -v
